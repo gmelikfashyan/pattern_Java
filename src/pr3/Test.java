@@ -40,7 +40,7 @@ public class Test {
             set.add(i);
         }});
         Thread secondSetTread = new Thread(() ->{ for (int i = 50; i < 150; i++) {
-            set.remove(gi);
+            set.remove(i);
         }});
         firstSetTread.start();
         secondSetTread.start();
