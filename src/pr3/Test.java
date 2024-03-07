@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Test {
     public static <Int> void main(String[] args) throws InterruptedException {
-        /*Map<String, String> map = new HashMap<>();
+        Map<String, String> map = new HashMap<>();
         Thread firstTread = new Thread(() ->{ for (int i = 0; i < 100; i++) {
             map.put("Key" + i, "value" + i);
         }});
@@ -31,7 +31,7 @@ public class Test {
         secondMyTread.start();
         Thread.sleep(5000);
         System.out.println(myMap.size());
-        System.out.println(myMap);*/
+        System.out.println(myMap);
 
 
 
