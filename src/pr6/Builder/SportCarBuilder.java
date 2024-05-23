@@ -9,13 +9,11 @@ public class SportCarBuilder implements CarBuilder{
         this.chassis = "Sport chassis";
         return this;
     }
-
     @Override
     public CarBuilder makeBody() {
         this.body = "Sport body";
         return this;
     }
-
     @Override
     public CarBuilder chooseColor(String color) {
         this.color = color;

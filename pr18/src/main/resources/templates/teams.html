@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<main>
+    <form action="#" th:action="@{/teams}" th:object="${team}" method="post">
+        <h2 class="Autorh2">Добавление команды</h2>
+        <div class = "textInput">
+            <input type="text" id="loginUsername" placeholder="Название" th:field="*{name}" required>
+            <input type="text" id="loginPassword" placeholder="Дата" th:field="*{creationDate}" required>
+            <button type="submit" class = "shineButton">Создать</button>
+        </div>
+    </form>
+</main>
+
+</body>
+</html>

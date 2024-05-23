@@ -1,5 +1,4 @@
 package pr6.Builder;
-
 public class Test {
     public static void main(String[] args) {
         SportCarBuilder sportCarBuilder = new SportCarBuilder();

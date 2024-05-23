@@ -1,5 +1,4 @@
 package pr6.AbstractFactory;
-
 public class CarFactory implements AbstractFactory{
     @Override
     public Convertible createConvertible() {
