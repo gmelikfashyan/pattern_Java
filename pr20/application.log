@@ -1,0 +1,73 @@
+396  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+426  [main] INFO  com.example.pr20.Pr20Application – Starting Pr20Application using Java 21.0.1 with PID 13244 (C:\Users\gmeli\IdeaProjects\pr20\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr20)
+426  [main] INFO  com.example.pr20.Pr20Application – No active profile set, falling back to 1 default profile: "default"
+908  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+933  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
+1585 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1592 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1593 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1593 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1634 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1634 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1158 ms
+1840 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1944 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6be766d1
+1944 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1967 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+1995 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+2013 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2166 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2195 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2800 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2806 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3074 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3522 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3572 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+3581 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port 8080 (http) with context path '/'
+3588 [main] INFO  com.example.pr20.Pr20Application – Started Pr20Application in 3.491 seconds (process running for 3.882)
+3902 [RMI TCP Connection(2)-192.168.31.233] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+3902 [RMI TCP Connection(2)-192.168.31.233] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+3903 [RMI TCP Connection(2)-192.168.31.233] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
+6655 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+6657 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+6663 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+428  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+466  [main] INFO  com.example.pr20.Pr20Application – Starting Pr20Application using Java 21.0.1 with PID 13384 (C:\Users\gmeli\IdeaProjects\pr20\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr20)
+466  [main] INFO  com.example.pr20.Pr20Application – No active profile set, falling back to 1 default profile: "default"
+960  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+993  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interface.
+1680 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1686 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1687 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1687 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1724 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1724 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1225 ms
+1908 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+2009 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3e753289
+2010 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+2047 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2080 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+2098 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2244 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2279 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2915 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2917 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3196 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3722 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3769 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+3778 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port 8080 (http) with context path '/'
+3787 [main] INFO  com.example.pr20.Pr20Application – Started Pr20Application in 3.677 seconds (process running for 4.15)
+4383 [RMI TCP Connection(2)-192.168.31.233] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+4383 [RMI TCP Connection(2)-192.168.31.233] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+4384 [RMI TCP Connection(2)-192.168.31.233] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
+7421 [http-nio-8080-exec-2] INFO  com.example.pr20.FootballerService – Find all footballers
+7512 [http-nio-8080-exec-2] INFO  com.example.pr20.TimeAspect – Время выполнения метода: List com.example.pr20.FootballerService.getFootballers() 90 мс
+10751 [http-nio-8080-exec-3] INFO  com.example.pr20.FootballerService – Find all footballers by Footballer first name
+10792 [http-nio-8080-exec-3] INFO  com.example.pr20.TimeAspect – Время выполнения метода: List com.example.pr20.FootballerService.filterFootballersByFirstName(String) 41 мс
+24660 [http-nio-8080-exec-4] INFO  com.example.pr20.FootballerService – Find all footballers by Footballer second name
+24666 [http-nio-8080-exec-4] INFO  com.example.pr20.TimeAspect – Время выполнения метода: List com.example.pr20.FootballerService.filterFootballerBySecondName(String) 6 мс
+320945 [http-nio-8080-exec-9] INFO  com.example.pr20.FootballerService – Find all footballers
+320949 [http-nio-8080-exec-9] INFO  com.example.pr20.TimeAspect – Время выполнения метода: List com.example.pr20.FootballerService.getFootballers() 4 мс
+8287225 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h4s771ms753µs600ns).
+8841631 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+8841635 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+8841635 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.

@@ -1,0 +1,36 @@
+471  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+500  [main] INFO  com.example.pr19.Pr19Application – Starting Pr19Application using Java 21.0.1 with PID 25076 (C:\Users\gmeli\IdeaProjects\pr19\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr19)
+501  [main] INFO  com.example.pr19.Pr19Application – No active profile set, falling back to 1 default profile: "default"
+1010 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1038 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
+1731 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1737 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1738 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1738 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1770 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1771 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1243 ms
+1921 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+2027 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5d221b20
+2028 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+2050 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2079 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+2097 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2226 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2263 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2872 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2874 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3118 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3598 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3637 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+3645 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port 8080 (http) with context path '/'
+3652 [main] INFO  com.example.pr19.Pr19Application – Started Pr19Application in 3.514 seconds (process running for 3.975)
+3914 [RMI TCP Connection(3)-192.168.31.233] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+3914 [RMI TCP Connection(3)-192.168.31.233] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+3915 [RMI TCP Connection(3)-192.168.31.233] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
+30646 [http-nio-8080-exec-1] INFO  com.example.pr19.FootballerService – Find all footballers
+39187 [http-nio-8080-exec-2] INFO  com.example.pr19.FootballerService – Find all footballers by Footballer first name
+60789 [http-nio-8080-exec-6] INFO  com.example.pr19.FootballerService – Find all footballers by Footballer second name
+488631 [http-nio-8080-exec-4] INFO  com.example.pr19.FootballerService – Find all footballers by Footballer first name
+1808571 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+1808573 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+1808578 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.

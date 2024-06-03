@@ -1,0 +1,46 @@
+483  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+518  [main] INFO  com.example.pr24.Pr24Application – Starting Pr24Application using Java 21.0.1 with PID 10320 (C:\Users\gmeli\IdeaProjects\pr24\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr24)
+519  [main] INFO  com.example.pr24.Pr24Application – No active profile set, falling back to 1 default profile: "default"
+1019 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1056 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interface.
+1878 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1887 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1888 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1888 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1931 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1931 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1380 ms
+2135 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+2257 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7f2ca6f8
+2257 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+2285 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2337 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+2367 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2559 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2605 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+3266 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+3267 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3562 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3898 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3957 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@42c3b02e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51039ec9, org.springframework.security.web.context.SecurityContextHolderFilter@63f08f9f, org.springframework.security.web.header.HeaderWriterFilter@75392381, org.springframework.security.web.authentication.logout.LogoutFilter@5623fd90, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f3ae18f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@44eda25b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@16575bfe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2cbc0224, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58052571, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60003305, org.springframework.security.web.access.ExceptionTranslationFilter@1912ba29, org.springframework.security.web.access.intercept.AuthorizationFilter@58338338]
+4291 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+4294 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+4296 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+4297 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+4301 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+4312 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+4324 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+

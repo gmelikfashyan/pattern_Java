@@ -1,0 +1,1164 @@
+809  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+858  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 33396 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+859  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+1330 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1365 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interface.
+2195 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+2205 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+2206 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+2206 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+2246 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+2246 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1343 ms
+2470 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+2609 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@34cf0e80
+2610 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+2662 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2718 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+2747 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2928 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2976 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+3695 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+3698 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3963 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sheduledService': Invocation of init method failed
+3964 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3965 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3967 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3969 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3980 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+4001 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sheduledService': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1780)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.NotCompliantMBeanException: MBean class com.example.pr22.SheduledService does not implement DynamicMBean, and neither follows the Standard MBean conventions (javax.management.NotCompliantMBeanException: Class com.example.pr22.SheduledService is not a JMX compliant Standard MBean) nor the MXBean conventions (javax.management.NotCompliantMBeanException: com.example.pr22.SheduledService: Class com.example.pr22.SheduledService is not a JMX compliant MXBean)
+	at java.management/com.sun.jmx.mbeanserver.Introspector.checkCompliance(Introspector.java:178)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:308)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at com.example.pr22.SheduledService.init(SheduledService.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 18 common frames omitted
+386  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+413  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 33444 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+413  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+847  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+873  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
+1573 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1580 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1581 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1581 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1617 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1617 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1173 ms
+1799 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1917 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@12aa381f
+1917 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1943 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+1975 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+2001 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2161 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2194 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2840 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2842 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3086 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sheduledService': Invocation of init method failed
+3086 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3087 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3089 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3091 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3102 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3113 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sheduledService': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1780)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.NotCompliantMBeanException: MBean class com.example.pr22.SheduledService does not implement DynamicMBean, and neither follows the Standard MBean conventions (javax.management.NotCompliantMBeanException: Class com.example.pr22.SheduledService is not a JMX compliant Standard MBean) nor the MXBean conventions (javax.management.NotCompliantMBeanException: com.example.pr22.SheduledService: Class com.example.pr22.SheduledService is not a JMX compliant MXBean)
+	at java.management/com.sun.jmx.mbeanserver.Introspector.checkCompliance(Introspector.java:178)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:308)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at com.example.pr22.SheduledService.init(SheduledService.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 18 common frames omitted
+399  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+427  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 11896 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+427  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+865  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+891  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
+1604 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1612 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1613 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1613 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1651 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1651 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1192 ms
+1839 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1949 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6115846e
+1950 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1974 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2006 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+2032 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2185 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2219 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2859 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2861 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3103 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sheduledService': Invocation of init method failed
+3103 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3104 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3108 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3109 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3120 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3132 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sheduledService': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1780)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.NotCompliantMBeanException: MBean class com.example.pr22.SheduledService does not implement DynamicMBean, and neither follows the Standard MBean conventions (javax.management.NotCompliantMBeanException: Class com.example.pr22.SheduledService is not a JMX compliant Standard MBean) nor the MXBean conventions (javax.management.NotCompliantMBeanException: com.example.pr22.SheduledService: Class com.example.pr22.SheduledService is not a JMX compliant MXBean)
+	at java.management/com.sun.jmx.mbeanserver.Introspector.checkCompliance(Introspector.java:178)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:308)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at com.example.pr22.SheduledService.init(SheduledService.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 18 common frames omitted
+389  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+418  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 10152 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+419  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+837  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+864  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interface.
+1558 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1566 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1566 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1566 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1608 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1608 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1160 ms
+1793 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1908 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1bec1589
+1909 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1934 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+1966 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+1984 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2148 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2183 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2821 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2823 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3067 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scheduledService': Invocation of init method failed
+3068 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3069 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3072 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3074 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3084 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3096 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scheduledService': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1780)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.NotCompliantMBeanException: MBean class com.example.pr22.ScheduledService does not implement DynamicMBean, and neither follows the Standard MBean conventions (javax.management.NotCompliantMBeanException: Class com.example.pr22.ScheduledService is not a JMX compliant Standard MBean) nor the MXBean conventions (javax.management.NotCompliantMBeanException: com.example.pr22.ScheduledService: Class com.example.pr22.ScheduledService is not a JMX compliant MXBean)
+	at java.management/com.sun.jmx.mbeanserver.Introspector.checkCompliance(Introspector.java:178)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:308)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at com.example.pr22.ScheduledService.init(ScheduledService.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 18 common frames omitted
+381  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+408  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 32412 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+408  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+795  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+821  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
+1489 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1495 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1497 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1497 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1533 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1534 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1096 ms
+1693 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1799 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@12f8682a
+1800 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1823 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+1854 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+1873 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2024 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2053 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2638 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2640 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+2867 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scheduledService': Invocation of init method failed
+2867 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+2868 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+2871 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+2874 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+2884 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2895 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scheduledService': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1780)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.NotCompliantMBeanException: MBean class com.example.pr22.ScheduledService does not implement DynamicMBean, and neither follows the Standard MBean conventions (javax.management.NotCompliantMBeanException: Class com.example.pr22.ScheduledService is not a JMX compliant Standard MBean) nor the MXBean conventions (javax.management.NotCompliantMBeanException: com.example.pr22.ScheduledService: Class com.example.pr22.ScheduledService is not a JMX compliant MXBean)
+	at java.management/com.sun.jmx.mbeanserver.Introspector.checkCompliance(Introspector.java:178)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:308)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at com.example.pr22.ScheduledService.init(ScheduledService.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 18 common frames omitted
+453  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+479  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 26464 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+480  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+918  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+943  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
+1634 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1645 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1647 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1647 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1689 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1690 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1184 ms
+1866 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1969 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@16ccd2bc
+1970 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1992 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2021 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+2039 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2182 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2220 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2806 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2808 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3040 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scheduledService': Invocation of init method failed
+3040 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3041 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3044 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3046 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3056 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3069 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scheduledService': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1780)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.NotCompliantMBeanException: MBean class com.example.pr22.ScheduledService does not implement DynamicMBean, and neither follows the Standard MBean conventions (javax.management.NotCompliantMBeanException: Class com.example.pr22.ScheduledService is not a JMX compliant Standard MBean) nor the MXBean conventions (javax.management.NotCompliantMBeanException: com.example.pr22.ScheduledService: Class com.example.pr22.ScheduledService is not a JMX compliant MXBean)
+	at java.management/com.sun.jmx.mbeanserver.Introspector.checkCompliance(Introspector.java:178)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:308)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at com.example.pr22.ScheduledService.init(ScheduledService.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 18 common frames omitted
+392  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+418  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 1916 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+418  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+861  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+887  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interface.
+1643 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1650 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1651 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1652 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1693 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1693 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1246 ms
+1885 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1995 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@399f5daf
+1996 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+2022 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2054 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+2076 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2238 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2270 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2909 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2911 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3158 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scheduledService': Invocation of init method failed
+3158 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3159 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3162 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3163 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3174 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3186 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scheduledService': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1780)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.NotCompliantMBeanException: MBean class com.example.pr22.ScheduledService does not implement DynamicMBean, and neither follows the Standard MBean conventions (javax.management.NotCompliantMBeanException: Class com.example.pr22.ScheduledService is not a JMX compliant Standard MBean) nor the MXBean conventions (javax.management.NotCompliantMBeanException: com.example.pr22.ScheduledService: Class com.example.pr22.ScheduledService is not a JMX compliant MXBean)
+	at java.management/com.sun.jmx.mbeanserver.Introspector.checkCompliance(Introspector.java:178)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:308)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at com.example.pr22.ScheduledService.init(ScheduledService.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 18 common frames omitted
+399  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+428  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 11728 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+429  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+857  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+882  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
+1596 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1604 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1606 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1606 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1643 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1644 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1184 ms
+1839 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1948 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@28ce75ec
+1949 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1976 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2007 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+2026 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2185 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2217 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2850 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2851 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3137 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3606 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration – 
+
+Using generated security password: a25c5ff2-b6c6-40d3-9864-4111cb55a1a6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+3678 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3696 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@77a27356, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73c21b13, org.springframework.security.web.context.SecurityContextHolderFilter@425a3af5, org.springframework.security.web.header.HeaderWriterFilter@24a5ddd7, org.springframework.web.filter.CorsFilter@66e6e5e9, org.springframework.security.web.csrf.CsrfFilter@34f876c, org.springframework.security.web.authentication.logout.LogoutFilter@7c0b83af, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6000ca67, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@57af157c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1964a3f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@63a833c5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c152246, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53b5356, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@654ab198, org.springframework.security.web.access.ExceptionTranslationFilter@5c519681, org.springframework.security.web.access.intercept.AuthorizationFilter@139a97e7]
+3775 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@74fd5fb0] with key 'scheduledService'
+3776 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3778 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3781 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3783 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3793 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3805 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@74fd5fb0] with key 'scheduledService'
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:641)
+	at org.springframework.jmx.export.MBeanExporter.lambda$registerBeans$2(MBeanExporter.java:568)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.springframework.jmx.export.MBeanExporter.registerBeans(MBeanExporter.java:568)
+	at org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.InstanceAlreadyExistsException: MXBean already registered with name com.example:type=ScheduledService
+	at java.management/com.sun.jmx.mbeanserver.MXBeanLookup.addReference(MXBeanLookup.java:152)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanSupport.register(MXBeanSupport.java:160)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.preRegister2(MBeanSupport.java:173)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:909)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at org.springframework.jmx.support.MBeanRegistrationSupport.doRegister(MBeanRegistrationSupport.java:138)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:687)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:631)
+	... 14 common frames omitted
+392  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+421  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 5404 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+421  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+865  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+893  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interface.
+1612 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1620 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1621 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1621 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1660 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1660 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1205 ms
+1839 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1946 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@77ba583
+1947 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1973 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2006 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+2025 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2183 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2217 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2847 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2848 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3136 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3636 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration – 
+
+Using generated security password: 1e46fde8-b479-4fb6-bc8b-cc77df3b177c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+3713 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3732 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@205efdfc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4306709f, org.springframework.security.web.context.SecurityContextHolderFilter@3e49adfa, org.springframework.security.web.header.HeaderWriterFilter@71de943f, org.springframework.web.filter.CorsFilter@35be9318, org.springframework.security.web.csrf.CsrfFilter@5c452e69, org.springframework.security.web.authentication.logout.LogoutFilter@393b99d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@57ab5033, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7c0b83af, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2ad39f2f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@452aea78, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43815bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67954d71, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7db53694, org.springframework.security.web.access.ExceptionTranslationFilter@679f3e12, org.springframework.security.web.access.intercept.AuthorizationFilter@1964a3f]
+3802 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@3e79473d] with key 'scheduledService'
+3804 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3806 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3808 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3810 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3822 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3833 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@3e79473d] with key 'scheduledService'
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:641)
+	at org.springframework.jmx.export.MBeanExporter.lambda$registerBeans$2(MBeanExporter.java:568)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.springframework.jmx.export.MBeanExporter.registerBeans(MBeanExporter.java:568)
+	at org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.InstanceAlreadyExistsException: MXBean already registered with name com.example:type=ScheduleService
+	at java.management/com.sun.jmx.mbeanserver.MXBeanLookup.addReference(MXBeanLookup.java:152)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanSupport.register(MXBeanSupport.java:160)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.preRegister2(MBeanSupport.java:173)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:909)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at org.springframework.jmx.support.MBeanRegistrationSupport.doRegister(MBeanRegistrationSupport.java:138)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:687)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:631)
+	... 14 common frames omitted
+371  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+398  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 31336 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+399  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+832  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+865  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interface.
+1614 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1622 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1623 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1623 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1661 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1661 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1222 ms
+1844 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1951 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@77ba583
+1952 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1977 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2012 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+2031 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2182 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2215 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2844 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2846 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3127 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3595 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration – 
+
+Using generated security password: 6cddf4f1-d823-44c1-bf75-48ab24006af7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+3664 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3682 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7abc838a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ee91bdf, org.springframework.security.web.context.SecurityContextHolderFilter@ebcf6c0, org.springframework.security.web.header.HeaderWriterFilter@122bfaac, org.springframework.web.filter.CorsFilter@1a034bbc, org.springframework.security.web.csrf.CsrfFilter@68330024, org.springframework.security.web.authentication.logout.LogoutFilter@7bd4f212, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@de06f28, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3449cddf, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5453b15d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2ad39f2f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c0b83af, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69497a36, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a6dd88e, org.springframework.security.web.access.ExceptionTranslationFilter@3e49adfa, org.springframework.security.web.access.intercept.AuthorizationFilter@46875fae]
+3740 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@1fa8a4f7] with key 'scheduledService'
+3742 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3743 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3747 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3748 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3758 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3768 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@1fa8a4f7] with key 'scheduledService'
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:641)
+	at org.springframework.jmx.export.MBeanExporter.lambda$registerBeans$2(MBeanExporter.java:568)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.springframework.jmx.export.MBeanExporter.registerBeans(MBeanExporter.java:568)
+	at org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.InstanceAlreadyExistsException: MXBean already registered with name com.example.pr22:type=ScheduleService
+	at java.management/com.sun.jmx.mbeanserver.MXBeanLookup.addReference(MXBeanLookup.java:152)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanSupport.register(MXBeanSupport.java:160)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.preRegister2(MBeanSupport.java:173)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:909)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at org.springframework.jmx.support.MBeanRegistrationSupport.doRegister(MBeanRegistrationSupport.java:138)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:687)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:631)
+	... 14 common frames omitted
+364  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+390  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 30692 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+391  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+779  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+807  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interface.
+1469 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1476 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1477 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1477 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1512 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1512 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1096 ms
+1676 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1787 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@38054d01
+1788 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1813 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+1841 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+1858 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+1998 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2035 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2621 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2623 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+2890 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3350 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration – 
+
+Using generated security password: 5985560b-c796-4958-b37d-5b954c3952ff
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+3419 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3437 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@432fca40, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@de06f28, org.springframework.security.web.context.SecurityContextHolderFilter@627222d8, org.springframework.security.web.header.HeaderWriterFilter@42e20500, org.springframework.web.filter.CorsFilter@71662b15, org.springframework.security.web.csrf.CsrfFilter@42130a5c, org.springframework.security.web.authentication.logout.LogoutFilter@41c7ef69, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2968d3c0, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@679f3e12, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@52d0a5fe, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@54a98439, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@fc9313d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65067d90, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f10082e, org.springframework.security.web.access.ExceptionTranslationFilter@17d6b6e, org.springframework.security.web.access.intercept.AuthorizationFilter@79224636]
+3496 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@2f1b8770] with key 'scheduledService'
+3498 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3499 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3502 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3504 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3513 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3524 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@2f1b8770] with key 'scheduledService'
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:641)
+	at org.springframework.jmx.export.MBeanExporter.lambda$registerBeans$2(MBeanExporter.java:568)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.springframework.jmx.export.MBeanExporter.registerBeans(MBeanExporter.java:568)
+	at org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.InstanceAlreadyExistsException: MXBean already registered with name com.example.pr22:type=Service
+	at java.management/com.sun.jmx.mbeanserver.MXBeanLookup.addReference(MXBeanLookup.java:152)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanSupport.register(MXBeanSupport.java:160)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.preRegister2(MBeanSupport.java:173)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:909)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at org.springframework.jmx.support.MBeanRegistrationSupport.doRegister(MBeanRegistrationSupport.java:138)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:687)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:631)
+	... 14 common frames omitted
+397  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+427  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 12676 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+428  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+857  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+883  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interface.
+1585 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1592 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1593 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1593 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1629 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1630 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1171 ms
+1806 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1910 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3ff8a3ad
+1911 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1937 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+1969 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+1989 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2145 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2181 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2799 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2801 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3084 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3654 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration – 
+
+Using generated security password: 8845c54d-745f-420d-96ad-b8b1b5923815
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+3765 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3792 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@54a98439, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b20b431, org.springframework.security.web.context.SecurityContextHolderFilter@19266ca3, org.springframework.security.web.header.HeaderWriterFilter@5d6d6533, org.springframework.web.filter.CorsFilter@46875fae, org.springframework.security.web.csrf.CsrfFilter@4c343088, org.springframework.security.web.authentication.logout.LogoutFilter@ebcf6c0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@74c919b2, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@32a7c583, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5b3f0552, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@654ab198, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@425a3af5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f0b32c0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@432fca40, org.springframework.security.web.access.ExceptionTranslationFilter@74ee8f57, org.springframework.security.web.access.intercept.AuthorizationFilter@565b77ba]
+3860 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@10acfe30] with key 'scheduledService'
+3862 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3864 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3867 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3869 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3880 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3893 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@10acfe30] with key 'scheduledService'
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:641)
+	at org.springframework.jmx.export.MBeanExporter.lambda$registerBeans$2(MBeanExporter.java:568)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.springframework.jmx.export.MBeanExporter.registerBeans(MBeanExporter.java:568)
+	at org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.InstanceAlreadyExistsException: MXBean already registered with name com.example.pr22:type=ScheduleService
+	at java.management/com.sun.jmx.mbeanserver.MXBeanLookup.addReference(MXBeanLookup.java:152)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanSupport.register(MXBeanSupport.java:160)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.preRegister2(MBeanSupport.java:173)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:909)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at org.springframework.jmx.support.MBeanRegistrationSupport.doRegister(MBeanRegistrationSupport.java:138)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:687)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:631)
+	... 14 common frames omitted
+380  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+411  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 40496 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+411  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+807  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+833  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
+1515 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1522 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1523 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1523 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1563 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1563 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1124 ms
+1735 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1840 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31b6b0c7
+1842 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1867 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+1900 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+1925 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2080 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2110 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2739 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2741 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3027 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3490 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration – 
+
+Using generated security password: d591e32c-9ff1-430a-9c64-fc568dd05bce
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+3584 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3606 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4a6dd88e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c3c05ff, org.springframework.security.web.context.SecurityContextHolderFilter@3e49adfa, org.springframework.security.web.header.HeaderWriterFilter@71de943f, org.springframework.web.filter.CorsFilter@2c62f56f, org.springframework.security.web.csrf.CsrfFilter@5c452e69, org.springframework.security.web.authentication.logout.LogoutFilter@393b99d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6107b3cb, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7c0b83af, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@65f270e7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7abc838a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43815bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67954d71, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@417f7d7f, org.springframework.security.web.access.ExceptionTranslationFilter@679f3e12, org.springframework.security.web.access.intercept.AuthorizationFilter@71662b15]
+3669 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@59f56892] with key 'scheduledService'
+3671 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3672 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3675 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3677 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3687 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3698 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@59f56892] with key 'scheduledService'
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:641)
+	at org.springframework.jmx.export.MBeanExporter.lambda$registerBeans$2(MBeanExporter.java:568)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.springframework.jmx.export.MBeanExporter.registerBeans(MBeanExporter.java:568)
+	at org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.InstanceAlreadyExistsException: MXBean already registered with name com.example.pr22:type=SchdService
+	at java.management/com.sun.jmx.mbeanserver.MXBeanLookup.addReference(MXBeanLookup.java:152)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanSupport.register(MXBeanSupport.java:160)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.preRegister2(MBeanSupport.java:173)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:909)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at org.springframework.jmx.support.MBeanRegistrationSupport.doRegister(MBeanRegistrationSupport.java:138)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:687)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:631)
+	... 14 common frames omitted
+375  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+403  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 20136 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+404  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+810  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+844  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interface.
+1533 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1539 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1541 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1541 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1577 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1577 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1144 ms
+1754 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1867 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@778113f2
+1868 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1894 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+1932 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+1951 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2105 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2136 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2740 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2742 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3026 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3491 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration – 
+
+Using generated security password: d99c8cf9-0f88-49fa-8a35-ce502bafe89c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+3564 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3585 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d4bb16b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74c919b2, org.springframework.security.web.context.SecurityContextHolderFilter@5d5b07e9, org.springframework.security.web.header.HeaderWriterFilter@6ce365b7, org.springframework.web.filter.CorsFilter@79224636, org.springframework.security.web.csrf.CsrfFilter@2ab0ca04, org.springframework.security.web.authentication.logout.LogoutFilter@679f3e12, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@269fe2fe, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5c519681, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@35307365, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5d8edf2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@360b6ea1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@333afc53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15d04c41, org.springframework.security.web.access.ExceptionTranslationFilter@6e925a46, org.springframework.security.web.access.intercept.AuthorizationFilter@626a4e0a]
+3643 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@4f96e484] with key 'scheduledService'
+3645 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3647 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3648 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3650 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3661 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3672 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@4f96e484] with key 'scheduledService'
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:641)
+	at org.springframework.jmx.export.MBeanExporter.lambda$registerBeans$2(MBeanExporter.java:568)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.springframework.jmx.export.MBeanExporter.registerBeans(MBeanExporter.java:568)
+	at org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.InstanceAlreadyExistsException: MXBean already registered with name com.example.pr:type=SchdService
+	at java.management/com.sun.jmx.mbeanserver.MXBeanLookup.addReference(MXBeanLookup.java:152)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanSupport.register(MXBeanSupport.java:160)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.preRegister2(MBeanSupport.java:173)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:909)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at org.springframework.jmx.support.MBeanRegistrationSupport.doRegister(MBeanRegistrationSupport.java:138)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:687)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:631)
+	... 14 common frames omitted
+356  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+383  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 39552 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+383  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+803  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+828  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interface.
+1496 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1503 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1504 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1504 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1540 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1540 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1128 ms
+1718 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1823 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a0d875d
+1824 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1846 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+1877 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+1895 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2039 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2070 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2654 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2656 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+2935 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3389 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration – 
+
+Using generated security password: 174a7714-084c-465d-8597-fdc9c06a311c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+3460 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3477 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6b334a1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57ab5033, org.springframework.security.web.context.SecurityContextHolderFilter@65067d90, org.springframework.security.web.header.HeaderWriterFilter@425a3af5, org.springframework.web.filter.CorsFilter@64df3f4b, org.springframework.security.web.csrf.CsrfFilter@2296ed0d, org.springframework.security.web.authentication.logout.LogoutFilter@6d952747, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@565b77ba, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4eda5325, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@54a98439, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@73c21b13, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16c559c7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@679f3e12, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b20b431, org.springframework.security.web.access.ExceptionTranslationFilter@24a5ddd7, org.springframework.security.web.access.intercept.AuthorizationFilter@56a7f57f]
+3554 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@70e07ef8] with key 'scheduledService'
+3556 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3557 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3559 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3561 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3571 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3582 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@70e07ef8] with key 'scheduledService'
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:641)
+	at org.springframework.jmx.export.MBeanExporter.lambda$registerBeans$2(MBeanExporter.java:568)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.springframework.jmx.export.MBeanExporter.registerBeans(MBeanExporter.java:568)
+	at org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.InstanceAlreadyExistsException: MXBean already registered with name com.example.pr:type=SchdService
+	at java.management/com.sun.jmx.mbeanserver.MXBeanLookup.addReference(MXBeanLookup.java:152)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanSupport.register(MXBeanSupport.java:160)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.preRegister2(MBeanSupport.java:173)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:909)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at org.springframework.jmx.support.MBeanRegistrationSupport.doRegister(MBeanRegistrationSupport.java:138)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:687)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:631)
+	... 14 common frames omitted
+355  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+380  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 17364 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+381  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+768  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+797  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
+1469 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1475 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1476 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1476 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1513 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1513 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1104 ms
+1691 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1808 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50b4364
+1809 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1832 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+1869 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+1889 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2035 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2066 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2659 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2661 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+2946 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3407 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration – 
+
+Using generated security password: c8d93940-3bf5-4cd2-873a-9223338898ab
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+3473 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3493 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@c310aa3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f7b4953, org.springframework.security.web.context.SecurityContextHolderFilter@333afc53, org.springframework.security.web.header.HeaderWriterFilter@78ba0a57, org.springframework.web.filter.CorsFilter@5536542e, org.springframework.security.web.csrf.CsrfFilter@6b438782, org.springframework.security.web.authentication.logout.LogoutFilter@4eda5325, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@139a97e7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4b3ea082, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@77a27356, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2968d3c0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10522dfd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c519681, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73c21b13, org.springframework.security.web.access.ExceptionTranslationFilter@6b174aa3, org.springframework.security.web.access.intercept.AuthorizationFilter@41a940a9]
+3549 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@22d23c27] with key 'scheduledService'
+3551 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3552 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3555 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3557 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3568 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3578 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@22d23c27] with key 'scheduledService'
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:641)
+	at org.springframework.jmx.export.MBeanExporter.lambda$registerBeans$2(MBeanExporter.java:568)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.springframework.jmx.export.MBeanExporter.registerBeans(MBeanExporter.java:568)
+	at org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.InstanceAlreadyExistsException: MXBean already registered with name com.example.pr22:type=SchdService
+	at java.management/com.sun.jmx.mbeanserver.MXBeanLookup.addReference(MXBeanLookup.java:152)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanSupport.register(MXBeanSupport.java:160)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.preRegister2(MBeanSupport.java:173)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:909)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at org.springframework.jmx.support.MBeanRegistrationSupport.doRegister(MBeanRegistrationSupport.java:138)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:687)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:631)
+	... 14 common frames omitted
+373  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+399  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 27884 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+400  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+807  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+834  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interface.
+1546 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1554 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1555 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1555 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1593 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1593 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1165 ms
+1770 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1873 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@38054d01
+1874 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1896 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+1924 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+1942 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2090 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2121 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2706 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2708 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+2988 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3449 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration – 
+
+Using generated security password: 0ee4df53-505d-42fb-8858-39c831ca98a0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+3518 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3535 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6107b3cb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2179127d, org.springframework.security.web.context.SecurityContextHolderFilter@57af157c, org.springframework.security.web.header.HeaderWriterFilter@16c559c7, org.springframework.web.filter.CorsFilter@76d1acf9, org.springframework.security.web.csrf.CsrfFilter@7aead157, org.springframework.security.web.authentication.logout.LogoutFilter@67e255cf, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4f7b4953, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7ae3591b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@196f9b75, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@de06f28, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e756b8d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b158e16, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@452aea78, org.springframework.security.web.access.ExceptionTranslationFilter@6c152246, org.springframework.security.web.access.intercept.AuthorizationFilter@740ddb41]
+3592 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@24ffe853] with key 'scheduledService'
+3594 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3595 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3598 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3601 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3610 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3620 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@24ffe853] with key 'scheduledService'
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:641)
+	at org.springframework.jmx.export.MBeanExporter.lambda$registerBeans$2(MBeanExporter.java:568)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.springframework.jmx.export.MBeanExporter.registerBeans(MBeanExporter.java:568)
+	at org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.InstanceAlreadyExistsException: MXBean already registered with name com.example.pr22:type=ScheduledService
+	at java.management/com.sun.jmx.mbeanserver.MXBeanLookup.addReference(MXBeanLookup.java:152)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanSupport.register(MXBeanSupport.java:160)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.preRegister2(MBeanSupport.java:173)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:909)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at org.springframework.jmx.support.MBeanRegistrationSupport.doRegister(MBeanRegistrationSupport.java:138)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:687)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:631)
+	... 14 common frames omitted
+382  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 8.0.1.Final
+410  [main] INFO  com.example.pr22.Pr22Application – Starting Pr22Application using Java 21.0.1 with PID 27012 (C:\Users\gmeli\IdeaProjects\pr22\build\classes\java\main started by gmeli in C:\Users\gmeli\IdeaProjects\pr22)
+410  [main] INFO  com.example.pr22.Pr22Application – No active profile set, falling back to 1 default profile: "default"
+843  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+870  [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interface.
+1594 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+1601 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1602 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1602 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.24]
+1641 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1641 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1199 ms
+1823 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+1933 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d1cb59f
+1933 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+1958 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+1988 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.1.Final
+2006 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2163 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2209 [main] WARN  org.hibernate.orm.deprecation – HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2849 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2851 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3142 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3604 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration – 
+
+Using generated security password: ab74593f-a361-49af-a95d-6b30f41b0627
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+3690 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint beneath base path '/actuator'
+3709 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7abc838a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ee91bdf, org.springframework.security.web.context.SecurityContextHolderFilter@4eef8498, org.springframework.security.web.header.HeaderWriterFilter@765ccc7a, org.springframework.web.filter.CorsFilter@1a034bbc, org.springframework.security.web.csrf.CsrfFilter@10522dfd, org.springframework.security.web.authentication.logout.LogoutFilter@3df2f4ab, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@de06f28, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@41c7ef69, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5453b15d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2ad39f2f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10ef09e3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@122bfaac, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a6dd88e, org.springframework.security.web.access.ExceptionTranslationFilter@32a7c583, org.springframework.security.web.access.intercept.AuthorizationFilter@46875fae]
+3768 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@5a983f8a] with key 'scheduledService'
+3769 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+3771 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+3775 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+3777 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+3788 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+3799 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [com.example.pr22.ScheduledService@5a983f8a] with key 'scheduledService'
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:641)
+	at org.springframework.jmx.export.MBeanExporter.lambda$registerBeans$2(MBeanExporter.java:568)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.springframework.jmx.export.MBeanExporter.registerBeans(MBeanExporter.java:568)
+	at org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.pr22.Pr22Application.main(Pr22Application.java:10)
+Caused by: javax.management.InstanceAlreadyExistsException: MXBean already registered with name com.example.pr22:type=ScheduledService
+	at java.management/com.sun.jmx.mbeanserver.MXBeanLookup.addReference(MXBeanLookup.java:152)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanSupport.register(MXBeanSupport.java:160)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.preRegister2(MBeanSupport.java:173)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:909)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at org.springframework.jmx.support.MBeanRegistrationSupport.doRegister(MBeanRegistrationSupport.java:138)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:687)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:631)
+	... 14 common frames omitted
